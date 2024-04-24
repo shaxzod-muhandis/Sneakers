@@ -1,3 +1,50 @@
-header{
-    background: red;
+.header {
+  width: 100%;
+  padding: 28px 0 34px 0;
+  display: flex;
+  border-bottom: 1px solid #e4e9f2;
+  align-items: center;
+  gap: 56px;
+}
+.nav {
+  flex-grow: 1;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  justify-content: space-between;
+}
+.nav-list > li > a {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 173%;
+  color: #69707d;
+  transition: all 0.3s;
+}
+
+.nav-list > li > a:hover {
+  color: #1d2026;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+}
+.user-cart {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.user-cart:hover > g > path {
+  fill: black;
+}
+.user-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.user-photo:hover {
+  border: 2px solid #ff7e1b;
 }
