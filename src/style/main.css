@@ -18,8 +18,11 @@ a {
   color: inherit;
 }
 
-.container {
-  max-width: 1158px;
-  padding: 0 24px;
+.product {
+  display: flex;
+  width: 100%;
+  max-width: 1050px;
   margin: 0 auto;
+  justify-content: space-between;
+  padding: 90px 0;
 }

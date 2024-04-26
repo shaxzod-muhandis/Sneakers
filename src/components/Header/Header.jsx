@@ -1,26 +1,36 @@
+import { useState } from "react";
 import "./header.css";
 
+const navList = [
+  { id: 1, text: "Collections", link: "#!" },
+  { id: 2, text: "Men", link: "#!" },
+  { id: 3, text: "Women", link: "#!" },
+  { id: 4, text: "About", link: "#!" },
+  { id: 5, text: "Contact", link: "#!" },
+];
+
 export const Header = () => {
+  const [dataId, setDataId] = useState(1);
+
   return (
     <header className="header">
-      <img src="../../public/assets/icons/logo.svg" alt="logo" />
+      <a href="#!">
+        <img src="../../public/assets/icons/logo.svg" alt="logo" />
+      </a>
       <nav className="nav">
         <ul className="nav-list">
-          <li>
-            <a href="#!">Collections</a>
-          </li>
-          <li>
-            <a href="#!">Men</a>
-          </li>
-          <li>
-            <a href="#!">Women</a>
-          </li>
-          <li>
-            <a href="#!">About</a>
-          </li>
-          <li>
-            <a href="#!">Contact</a>
-          </li>
+          {navList.map((element) => {
+            const { id, text, link } = element;
+            return (
+              <li
+                key={id}
+                className={dataId == id ? "nav-list--active" : ""}
+                onClick={() => setDataId(id)}
+              >
+                <a href={link}>{text}</a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
       <div className="user-box">
