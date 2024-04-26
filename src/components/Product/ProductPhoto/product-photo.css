@@ -1,0 +1,23 @@
+.product-photo {
+  width: 445px;
+  height: 100%;
+}
+.product-photo_main {
+  margin-bottom: 32px;
+}
+.product-photo_main > img {
+  width: 445px;
+  height: 445px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.product-photo_list {
+  display: flex;
+  justify-content: space-between;
+}
+.product-photo_list > img {
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+  object-fit: cover;
+}
