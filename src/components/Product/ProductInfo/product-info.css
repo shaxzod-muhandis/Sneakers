@@ -88,7 +88,9 @@
   cursor: pointer;
   transition: all 0.3s;
 }
-
+.add-btn > svg > g > path {
+  fill: #f6f8fd;
+}
 .add-btn:hover {
   background: #ff7e1ba8;
 }

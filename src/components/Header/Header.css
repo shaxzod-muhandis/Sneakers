@@ -51,6 +51,23 @@
   align-items: center;
   gap: 46px;
 }
+.user-box > span {
+  position: relative;
+}
+.user-box > span::after {
+  content: attr(data-count);
+  border-radius: 6px;
+  max-width: 19px;
+  height: 13px;
+  background: #ff7e1b;
+  font-weight: 700;
+  font-size: 10px;
+  color: #fff;
+  padding: 1px 7px;
+  position: absolute;
+  top: -8px;
+  right: -9px;
+}
 .user-cart {
   transition: all 0.3s;
   cursor: pointer;
