@@ -2,6 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import Cart from "../../../public/assets/icons/cart.svg";
 import "./header.css";
+import { Popup } from "../Popup/Popup";
 
 const navList = [
   { id: 1, text: "Collections", link: "#!" },
@@ -13,6 +14,7 @@ const navList = [
 
 export const Header = ({ isCount }) => {
   const [dataId, setDataId] = useState(1);
+  const [getCount, setIsCount] = useState(0);
   console.log(isCount);
   return (
     <header className="header">
@@ -37,10 +39,24 @@ export const Header = ({ isCount }) => {
       </nav>
       <div className="user-box">
         {isCount == 0 ? (
-          <Cart />
+          <div
+            className="cart-wrap"
+            onClick={() =>
+              setIsCount(getCount >= 1 ? getCount - 1 : getCount + 1)
+            }
+          >
+            <Cart />
+          </div>
         ) : (
           <span data-count={isCount}>
-            <Cart />
+            <div
+              className="cart-wrap"
+              onClick={() =>
+                setIsCount(getCount >= 1 ? getCount - 1 : getCount + 1)
+              }
+            >
+              <Cart />
+            </div>
           </span>
         )}
 
@@ -49,6 +65,7 @@ export const Header = ({ isCount }) => {
           alt="user photo"
           className="user-photo"
         />
+        <Popup setSum={isCount} isActive={getCount} />
       </div>
     </header>
   );

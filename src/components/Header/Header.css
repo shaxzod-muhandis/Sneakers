@@ -50,6 +50,7 @@
   display: flex;
   align-items: center;
   gap: 46px;
+  position: relative;
 }
 .user-box > span {
   position: relative;
@@ -68,11 +69,11 @@
   top: -8px;
   right: -9px;
 }
-.user-cart {
+.cart-wrap {
   transition: all 0.3s;
   cursor: pointer;
 }
-.user-cart:hover > g > path {
+.cart-wrap:hover svg > g > path {
   fill: black;
 }
 .user-photo {
