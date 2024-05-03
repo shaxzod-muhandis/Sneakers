@@ -12,10 +12,10 @@ const navList = [
   { id: 5, text: "Contact", link: "#!" },
 ];
 
-export const Header = ({ isCount }) => {
+export const Header = ({ isCount, setIsCount }) => {
   const [dataId, setDataId] = useState(1);
-  const [getCount, setIsCount] = useState(0);
-  console.log(isCount);
+  const [getCount, setGetIsCount] = useState(0);
+
   return (
     <header className="header">
       <a href="#!">
@@ -42,7 +42,7 @@ export const Header = ({ isCount }) => {
           <div
             className="cart-wrap"
             onClick={() =>
-              setIsCount(getCount >= 1 ? getCount - 1 : getCount + 1)
+              setGetIsCount(getCount >= 1 ? getCount - 1 : getCount + 1)
             }
           >
             <Cart />
@@ -52,7 +52,7 @@ export const Header = ({ isCount }) => {
             <div
               className="cart-wrap"
               onClick={() =>
-                setIsCount(getCount >= 1 ? getCount - 1 : getCount + 1)
+                setGetIsCount(getCount >= 1 ? getCount - 1 : getCount + 1)
               }
             >
               <Cart />
@@ -65,11 +65,12 @@ export const Header = ({ isCount }) => {
           alt="user photo"
           className="user-photo"
         />
-        <Popup setSum={isCount} isActive={getCount} />
+        <Popup setSum={isCount} isCount={getCount} setIsCount={setIsCount} />
       </div>
     </header>
   );
 };
 Header.propTypes = {
   isCount: PropTypes.number,
+  setIsCount: PropTypes.func,
 };
