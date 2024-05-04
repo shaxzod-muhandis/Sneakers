@@ -5,16 +5,19 @@ import { ProductPhoto } from "./components/Product/ProductPhoto/ProductPhoto";
 
 import "./style/main.css";
 import { Modal } from "./components/Modal/Modal";
+import { NavModal } from "./components/NavModal/NavModal";
 function App() {
   const [isCount, setIsCount] = useState(0);
   const [isModalActive, setIsModalActive] = useState(false);
+  const [isNavModalActive, setIsNavModalActive] = useState(false);
   return (
     <div className="container">
       {isModalActive && <Modal setIsModalActive={setIsModalActive} />}
-      <Header isCount={isCount} setIsCount={setIsCount} />
+      {isNavModalActive && <NavModal setIsNavModalActive={setIsNavModalActive} />}
+      <Header isCount={isCount} setIsCount={setIsCount} setIsNavModalActive={setIsNavModalActive}/>
       <main className="product">
-        <div onClick={() => setIsModalActive(!isModalActive)}>
-          <ProductPhoto />
+        <div>
+          <ProductPhoto setIsModalActive={setIsModalActive}/>
         </div>
         <ProductInfo setIsCount={setIsCount} isCount={isCount} />
       </main>

@@ -12,6 +12,7 @@
     text-align: center;
     color: #69707d;
     margin-top: 77px;
+
   }
   .active {
     position: absolute;
@@ -23,6 +24,10 @@
     top: 66px;
     right: -50px;
     display: block;
+    z-index: 99999;
+    @media (max-width:900px) {
+      right: -15px;
+    }
   }
   .title {
     padding: 24px;
@@ -79,5 +84,8 @@
     color: #fff;
     cursor: pointer;
     user-select: none;
+  }
+  .clear-btn{
+cursor: pointer;
   }
   

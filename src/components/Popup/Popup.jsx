@@ -33,7 +33,7 @@ export const Popup = ({ setSum, isCount, setIsCount }) => {
                 <span className="sum">${125.0 * setSum}.00</span>
               </p>
             </div>
-            <span>
+            <span className="clear-btn">
               <Clear onClick={removeItem} />
             </span>
           </div>

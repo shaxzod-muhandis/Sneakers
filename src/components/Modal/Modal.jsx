@@ -70,5 +70,5 @@ export const Modal = ({ setIsModalActive }) => {
   );
 };
 Modal.propTypes = {
-  setIsModalActive: PropTypes.number,
+  setIsModalActive: PropTypes.func,
 };

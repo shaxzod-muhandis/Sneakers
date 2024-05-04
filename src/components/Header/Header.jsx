@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Cart from "../../../public/assets/icons/cart.svg";
+import NavBtn from "../../../public/assets/icons/nav-btn.svg";
 import "./header.css";
 import { Popup } from "../Popup/Popup";
 
@@ -12,15 +13,18 @@ const navList = [
   { id: 5, text: "Contact", link: "#!" },
 ];
 
-export const Header = ({ isCount, setIsCount }) => {
+export const Header = ({ isCount, setIsCount ,setIsNavModalActive}) => {
   const [dataId, setDataId] = useState(1);
   const [getCount, setGetIsCount] = useState(0);
 
   return (
     <header className="header">
+      <div className="headerLogo">
+          <span className="navBtn" onClick={()=>setIsNavModalActive(true)}><NavBtn/></span>
       <a href="#!">
         <img src="../../public/assets/icons/logo.svg" alt="logo" />
       </a>
+      </div>
       <nav className="nav">
         <ul className="nav-list">
           {navList.map((element) => {
@@ -64,6 +68,7 @@ export const Header = ({ isCount, setIsCount }) => {
           src="../../public/assets/image/user.png"
           alt="user photo"
           className="user-photo"
+          
         />
         <Popup setSum={isCount} isCount={getCount} setIsCount={setIsCount} />
       </div>
@@ -73,4 +78,5 @@ export const Header = ({ isCount, setIsCount }) => {
 Header.propTypes = {
   isCount: PropTypes.number,
   setIsCount: PropTypes.func,
+  setIsNavModalActive:PropTypes.func
 };
