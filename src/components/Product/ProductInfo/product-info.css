@@ -1,5 +1,5 @@
 .product-info {
-  width: 445px;
+  max-width: 445px;
   padding-top: 62px;
   font-weight: 700;
   color: #1d2026;
