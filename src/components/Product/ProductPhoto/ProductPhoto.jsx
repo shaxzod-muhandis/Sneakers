@@ -32,13 +32,13 @@ export const ProductPhoto = ({setIsModalActive}) => {
             className="photo-arrow photo-arrow-left"
             onClick={() => setIsCount(isCount - 1)}
           >
-            <Arrow />
+            <Arrow className='arrow'/>
           </button>
       <button
             className="photo-arrow photo-arrow-right"
             onClick={() => setIsCount(isCount + 1)}
           >
-            <Arrow />
+            <Arrow className='arrow'/>
           </button>
       <div className="product-photo_main" onClick={()=>setIsModalActive(true)}>
         <img src={isActive.imgUrl} alt="product photo" />
