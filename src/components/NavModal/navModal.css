@@ -1,0 +1,66 @@
+body{
+    /* overflow: hidden; */
+}
+
+.modalContainer {
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  z-index: 9999;
+  
+  animation: modal 0.5s linear;
+  padding: 25px;
+}
+@keyframes modal {
+    0%{
+        left: -250px;
+    }
+
+    100%{
+        left: 0;
+    }
+}
+.nav-modal--wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: #000000a1;
+  display: flex;
+}
+.cross{
+    margin-bottom: 55px;
+    cursor: pointer;
+}
+.cross >svg >path{
+    fill:#69707d;
+
+}
+.navList{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.navList>li>a {
+font-weight: 700;
+font-size: 18px;
+line-height: 144%;
+color: #1d2026;
+
+animation: text 1s linear;
+}
+@keyframes text {
+    0%{
+        opacity: -10%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

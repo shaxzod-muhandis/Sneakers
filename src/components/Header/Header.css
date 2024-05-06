@@ -1,13 +1,21 @@
 .header {
   width: 100%;
   max-width: 1158px;
-  padding: 0 24px;
   margin: 0 auto;
-  padding: 28px 0 34px 0;
+  padding: 28px 24px 34px 24px;
   display: flex;
   border-bottom: 1px solid #e4e9f2;
   align-items: center;
   gap: 56px;
+  
+}
+.headerLogo{
+  display: flex;
+  gap: 16px;
+}
+.navBtn{
+  display: none;
+  cursor: pointer;
 }
 .nav {
   flex-grow: 1;
@@ -84,4 +92,29 @@
 }
 .user-photo:hover {
   border: 2px solid #ff7e1b;
+}
+@media (max-width:800px) {
+  .nav{
+    display: none;
+  }
+  .navBtn{
+    display: block;
+  }
+  .header{
+    justify-content: space-between;
+  }
+}
+@media (max-width:470px) {
+  .header {
+    padding: 20px 24px;
+
+  }
+  .user-photo {
+    width: 24px;
+    height: 24px;
+   
+  }
+  .user-box {
+    gap: 22px;
+  }
 }

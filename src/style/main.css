@@ -25,4 +25,18 @@ a {
   margin: 0 auto;
   justify-content: space-between;
   padding: 90px 0;
+  gap: 40px;
+  flex-wrap: wrap;
+  @media (max-width:1120px) {
+    padding: 90px 24px;
+  }
+  @media (max-width:977px) {
+   justify-content: center;
+  }
 }
+@media (max-width:470px) {
+  .product{
+    padding: 0;
+    gap: 0;
+  }
+ }
