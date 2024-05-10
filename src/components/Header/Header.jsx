@@ -20,7 +20,7 @@ export const Header = ({ isCount, setIsCount ,setIsNavModalActive}) => {
   return (
     <header className="header">
       <div className="headerLogo">
-          <span className="navBtn" onClick={()=>setIsNavModalActive(true)}><NavBtn/></span>
+          <span className="navBtn" onClick={()=>{setIsNavModalActive(true),setGetIsCount(0)}}><NavBtn/></span>
       <a href="#!">
         <img src="../../public/assets/icons/logo.svg" alt="logo" />
       </a>
@@ -78,5 +78,6 @@ export const Header = ({ isCount, setIsCount ,setIsNavModalActive}) => {
 Header.propTypes = {
   isCount: PropTypes.number,
   setIsCount: PropTypes.func,
-  setIsNavModalActive:PropTypes.func
+  setIsNavModalActive:PropTypes.func,
+  setIsModalActive:PropTypes.func
 };

@@ -33,10 +33,15 @@ a {
   @media (max-width:977px) {
    justify-content: center;
   }
+
+  @media (max-width:470px){
+ display: block;
+  }
 }
 @media (max-width:470px) {
   .product{
     padding: 0;
     gap: 0;
   }
- }
+}
+
