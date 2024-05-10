@@ -12,6 +12,7 @@ function App() {
   const [isNavModalActive, setIsNavModalActive] = useState(false);
   return (
     <div className="container">
+   
       {isModalActive && <Modal setIsModalActive={setIsModalActive} />}
       {isNavModalActive && <NavModal setIsNavModalActive={setIsNavModalActive} />}
       <Header isCount={isCount} setIsCount={setIsCount} setIsNavModalActive={setIsNavModalActive}/>
@@ -19,7 +20,7 @@ function App() {
         <div>
           <ProductPhoto setIsModalActive={setIsModalActive}/>
         </div>
-        <ProductInfo setIsCount={setIsCount} isCount={isCount} />
+        <ProductInfo setIsCount={setIsCount}  />
       </main>
     </div>
   );

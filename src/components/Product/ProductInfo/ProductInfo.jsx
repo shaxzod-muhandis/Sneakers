@@ -5,11 +5,11 @@ import Cart from "../../../../public/assets/icons/cart.svg";
 import "./product-info.css";
 import { useState } from "react";
 
-export const ProductInfo = ({ isCount, setIsCount }) => {
+export const ProductInfo = ({setIsCount }) => {
   const [addToCard, setAddToCard] = useState(0);
   function addToCardFun() {
     setIsCount(addToCard);
-    setAddToCard(isCount);
+    setAddToCard(0)
   }
   return (
     <div className="product-info">
