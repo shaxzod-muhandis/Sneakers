@@ -13,7 +13,7 @@ const navList = [
   { id: 5, text: "Contact", link: "#!" },
 ];
 
-export const Header = ({ isCount, setIsCount ,setIsNavModalActive}) => {
+export const Header = ({ isCount,setIsNavModalActive}) => {
   const [dataId, setDataId] = useState(1);
   const [getCount, setGetIsCount] = useState(0);
 
@@ -70,14 +70,12 @@ export const Header = ({ isCount, setIsCount ,setIsNavModalActive}) => {
           className="user-photo"
           
         />
-        <Popup setSum={isCount} isCount={getCount} setIsCount={setIsCount} />
+        <Popup getCount={getCount}/>
       </div>
     </header>
   );
 };
 Header.propTypes = {
   isCount: PropTypes.number,
-  setIsCount: PropTypes.func,
   setIsNavModalActive:PropTypes.func,
-  setIsModalActive:PropTypes.func
 };

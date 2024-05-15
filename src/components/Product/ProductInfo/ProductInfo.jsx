@@ -1,15 +1,12 @@
 import PropTypes from "prop-types";
-
 import Cart from "../../../../public/assets/icons/cart.svg";
-
 import "./product-info.css";
 import { useState } from "react";
-
-export const ProductInfo = ({setIsCount }) => {
+export const ProductInfo = ({ setIsCount }) => {
   const [addToCard, setAddToCard] = useState(0);
   function addToCardFun() {
     setIsCount(addToCard);
-    setAddToCard(0)
+    setAddToCard(0);
   }
   return (
     <div className="product-info">
@@ -46,8 +43,6 @@ export const ProductInfo = ({setIsCount }) => {
     </div>
   );
 };
-
 ProductInfo.propTypes = {
-  isCount: PropTypes.number,
   setIsCount: PropTypes.func,
 };
